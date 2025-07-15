@@ -1,27 +1,26 @@
-package com.ninacode.showmyclock
+package com.ninacode.showmyclock.v2
 
 import android.os.Bundle
-import android.widget.AnalogClock
 import android.widget.TextClock
 import androidx.appcompat.app.AppCompatActivity
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var analogClock: AnalogClock
     private lateinit var digitalClock: TextClock
+    private lateinit var analogStyleClock: TextClock
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        analogClock = findViewById(R.id.analogClock)
         digitalClock = findViewById(R.id.digitalClock)
+        analogStyleClock = findViewById(R.id.analogStyleClock)
 
-        val showAnalogClock = Random.nextBoolean()
+        val showAnalogStyle = Random.nextBoolean()
 
-        if (showAnalogClock) {
-            analogClock.visibility = AnalogClock.VISIBLE
+        if (showAnalogStyle) {
+            analogStyleClock.visibility = TextClock.VISIBLE
         } else {
             digitalClock.visibility = TextClock.VISIBLE
         }

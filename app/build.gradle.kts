@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "com.ninacode.showmyclock"
-    compileSdk = 34
+    namespace = "com.ninacode.showmyclock.v2"
+    compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.ninacode.showmyclock"
+        applicationId = "com.ninacode.showmyclock.v2"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
